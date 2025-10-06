@@ -14,11 +14,6 @@ import numpy as np
 from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
 import av
 
-
-# -----------------------------
-# Environment & Gemini Client
-# -----------------------------
-
 def configure_environment() -> None:
     load_dotenv()
     api_key = os.getenv("GEMINI_API_KEY", "").strip()
@@ -32,11 +27,6 @@ def create_gemini_model() -> Any:
         return None
     # Use a reasonably capable model; adjust as needed
     return genai.GenerativeModel("gemini-2.5-pro")
-
-
-# -----------------------------
-# AI Helpers
-# -----------------------------
 
 # Difficulty guidance used to steer question generation
 DIFFICULTY_GUIDANCE: Dict[str, str] = {
@@ -190,11 +180,6 @@ def evaluate_responses(role: str, qa: List[Dict[str, str]], model: Any) -> Dict[
         "scores": scores,
     }
 
-
-# -----------------------------
-# UI Helpers
-# -----------------------------
-
 def init_session_state() -> None:
     if "candidate_name" not in st.session_state:
         st.session_state.candidate_name = ""
@@ -301,11 +286,6 @@ def build_pdf(report: Dict[str, Any], candidate_name: str, role: str) -> bytes:
     c.save()
     buffer.seek(0)
     return buffer.read()
-
-
-# -----------------------------
-# Main App
-# -----------------------------
 
 def main() -> None:
     st.set_page_config(page_title="AI Interviewer", layout="wide")
