@@ -4,7 +4,7 @@ An interactive web application that conducts AI-driven technical interviews usin
 
 ## Features
 
-- 🎥 Real-time video streaming for face-to-face interviews
+- 🎥 Real-time video streaming for face-to-face interviews(under-progress)
 - 🎙️ Voice-to-text transcription support
 - 🤖 AI-generated interview questions based on role and difficulty
 - 📊 Automated evaluation and scoring
