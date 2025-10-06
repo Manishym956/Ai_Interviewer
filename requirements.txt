@@ -1,0 +1,29 @@
+# Web app framework
+streamlit>=1.37.0
+
+# Realtime media (WebRTC) for audio/video in Streamlit
+streamlit-webrtc>=0.47.7
+aiortc>=1.9.0
+av>=12.3.0
+
+# Google Generative AI (Gemini)
+google-generativeai>=0.8.3
+
+# Environment variable management
+python-dotenv>=1.0.1
+
+# HTTP client (for any external calls if needed)
+requests>=2.32.3
+
+# Optional: STT provider alternatives to Whisper
+# Choose one based on your preference and API access (not all required)
+deepgram-sdk>=3.7.6
+assemblyai>=0.35.0
+vosk>=0.3.45
+azure-cognitiveservices-speech>=1.40.0
+
+# Optional: OpenAI client (if you still want Whisper API fallback)
+openai>=1.43.0
+
+# Optional: server-side PDF generation alternative
+reportlab>=4.2.2
